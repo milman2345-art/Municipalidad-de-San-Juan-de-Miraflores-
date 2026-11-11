@@ -1,703 +1,367 @@
-/* ==========================================
-   VARIABLES Y ESTILOS GLOBALES (ESTÉTICA INDUSTRIAL)
-   ========================================== */
-:root {
-    --bg-grafito: #0f1115;
-    --bg-grafito-light: #181c24;
-    --amarillo-acento: #ffc300;
-    --amarillo-hover: #e0aa00;
-    --gris-acero: #2e3440;
-    --blanco-hueso: #f4f4f2;
-    --texto-muted: #9ba1a6;
-    --borde-industrial: #282f3d;
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--blanco-hueso);
-    background-color: var(--bg-grafito);
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--blanco-hueso);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-}
-
-.section-header h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--amarillo-acento);
-    margin: 10px auto 0;
-}
-
-.section-header p {
-    color: var(--texto-muted);
-    font-size: 1.1rem;
-}
-
-/* ==========================================
-   BOTONES
-   ========================================== */
-.btn {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 4px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: var(--transition);
-    cursor: pointer;
-    text-align: center;
-    border: none;
-}
-
-.btn-primary {
-    background-color: var(--amarillo-acento);
-    color: var(--bg-grafito);
-}
-
-.btn-primary:hover {
-    background-color: var(--amarillo-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(255, 195, 0, 0.3);
-}
-
-.btn-full {
-    width: 100%;
-}
-
-/* ==========================================
-   MENÚ FIJO SUPERIOR (HEADER)
-   ========================================== */
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(15, 17, 21, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--borde-industrial);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--blanco-hueso);
-    letter-spacing: 1.5px;
-}
-
-.logo span {
-    color: var(--amarillo-acento);
-}
-
-.main-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.main-nav a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    color: var(--blanco-hueso);
-    letter-spacing: 1px;
-    transition: var(--transition);
-}
-
-.main-nav a:hover {
-    color: var(--amarillo-acento);
-}
-
-.btn-nav {
-    background-color: var(--amarillo-acento);
-    color: var(--bg-grafito) !important;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 700;
-}
-
-.btn-nav:hover {
-    background-color: var(--amarillo-hover) !important;
-}
-
-/* ==========================================
-   1. INICIO (HERO)
-   ========================================== */
-.hero-section {
-    position: relative;
-    height: 100vh;
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 80px;
-    overflow: hidden;
-}
-
-.hero-bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(15, 17, 21, 0.92) 0%, rgba(15, 17, 21, 0.8) 100%);
-    z-index: 1;
-}
-
-.hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    padding: 0 20px;
-}
-
-.badge-tag {
-    display: inline-block;
-    background-color: rgba(255, 195, 0, 0.15);
-    color: var(--amarillo-acento);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 195, 0, 0.3);
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    line-height: 1.15;
-    margin-bottom: 25px;
-}
-
-.hero-content h1 .highlight {
-    color: var(--amarillo-acento);
-}
-
-.hero-content p {
-    font-size: 1.15rem;
-    color: var(--texto-muted);
-    max-width: 750px;
-    margin: 0 auto 35px;
-}
-
-/* ==========================================
-   2. FRANJA DE CIFRAS
-   ========================================== */
-.stats-section {
-    background-color: var(--bg-grafito-light);
-    border-top: 1px solid var(--borde-industrial);
-    border-bottom: 1px solid var(--borde-industrial);
-    padding: 50px 0;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    text-align: center;
-}
-
-.stat-number {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--amarillo-acento);
-    display: block;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 0.95rem;
-    color: var(--texto-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* ==========================================
-   SEPARADOR DIAGONAL TIPO CONSTRUCCIÓN
-   ========================================== */
-.construction-stripe {
-    height: 12px;
-    background: repeating-linear-gradient(
-        -45deg,
-        var(--amarillo-acento),
-        var(--amarillo-acento) 20px,
-        var(--bg-grafito) 20px,
-        var(--bg-grafito) 40px
-    );
-}
-
-/* ==========================================
-   3. SERVICIOS (TARJETAS)
-   ========================================== */
-.services-section {
-    padding: 100px 0;
-    background-color: var(--bg-grafito);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background-color: var(--bg-grafito-light);
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--borde-industrial);
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--amarillo-acento);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.card-img-wrapper {
-    height: 200px;
-    overflow: hidden;
-}
-
-.card-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.service-card:hover .card-img-wrapper img {
-    transform: scale(1.08);
-}
-
-.card-body {
-    padding: 25px;
-}
-
-.card-body h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    color: var(--blanco-hueso);
-}
-
-.card-body p {
-    color: var(--texto-muted);
-    font-size: 0.92rem;
-}
-
-.highlight-card {
-    background-color: var(--gris-acero);
-    border-color: var(--amarillo-acento);
-}
-
-/* ==========================================
-   4. PROCESO DE TRABAJO
-   ========================================== */
-.process-section {
-    padding: 100px 0;
-    background-color: var(--bg-grafito-light);
-    border-top: 1px solid var(--borde-industrial);
-}
-
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
-}
-
-.process-step {
-    background-color: var(--bg-grafito);
-    padding: 35px 25px;
-    border-radius: 6px;
-    border: 1px solid var(--borde-industrial);
-    position: relative;
-    transition: var(--transition);
-}
-
-.process-step:hover {
-    border-color: var(--amarillo-acento);
-}
-
-.step-num {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--amarillo-acento);
-    display: block;
-    margin-bottom: 15px;
-}
-
-.process-step h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.process-step p {
-    color: var(--texto-muted);
-    font-size: 0.9rem;
-}
-
-/* ==========================================
-   5. DEMOLICIÓN: GALERÍA DEL PROCESO
-   ========================================== */
-.demolition-section {
-    padding: 100px 0;
-    background-color: var(--bg-grafito);
-}
-
-.demolition-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.demo-card {
-    position: relative;
-    height: 280px;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--borde-industrial);
-}
-
-.demo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.demo-card:hover img {
-    transform: scale(1.08);
-}
-
-.demo-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(transparent, rgba(15, 17, 21, 0.9));
-}
-
-.demo-caption span {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.05rem;
-    letter-spacing: 1px;
-    color: var(--amarillo-acento);
-}
-
-/* ==========================================
-   6. PROYECTOS: OBRAS TERMINADAS
-   ========================================== */
-.projects-section {
-    padding: 100px 0;
-    background-color: var(--bg-grafito-light);
-    border-top: 1px solid var(--borde-industrial);
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 30px;
-}
-
-.project-item {
-    position: relative;
-    height: 320px;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--borde-industrial);
-}
-
-.project-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-item:hover img {
-    transform: scale(1.08);
-}
-
-.project-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 20px;
-    background: linear-gradient(transparent, rgba(15, 17, 21, 0.95));
-}
-
-.project-overlay h4 {
-    font-size: 1.25rem;
-    margin-bottom: 5px;
-    color: var(--blanco-hueso);
-}
-
-.project-overlay p {
-    font-size: 0.85rem;
-    color: var(--amarillo-acento);
-}
-
-/* ==========================================
-   7. SOBRE NOSOTROS
-   ========================================== */
-.about-section {
-    padding: 100px 0;
-    background-color: var(--bg-grafito);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-}
-
-.about-text p {
-    color: var(--texto-muted);
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-
-.about-list {
-    margin-top: 25px;
-}
-
-.about-list li {
-    margin-bottom: 12px;
-    font-weight: 500;
-    color: var(--blanco-hueso);
-}
-
-.about-img-wrapper {
-    height: 420px;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 2px solid var(--amarillo-acento);
-}
-
-.about-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ==========================================
-   8. CONTACTO
-   ========================================== */
-.contact-section {
-    padding: 100px 0;
-    background-color: var(--bg-grafito-light);
-    border-top: 1px solid var(--borde-industrial);
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 50px;
-}
-
-.contact-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    color: var(--texto-muted);
-    margin-bottom: 25px;
-}
-
-.contact-detail {
-    margin-bottom: 15px;
-    color: var(--blanco-hueso);
-    font-size: 0.95rem;
-}
-
-.whatsapp-box {
-    margin-top: 35px;
-    background-color: var(--bg-grafito);
-    padding: 25px;
-    border-radius: 6px;
-    border-left: 4px solid #25d366;
-    border-top: 1px solid var(--borde-industrial);
-    border-right: 1px solid var(--borde-industrial);
-    border-bottom: 1px solid var(--borde-industrial);
-}
-
-.whatsapp-box p {
-    margin-bottom: 12px;
-    font-weight: 500;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    background-color: #25d366;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: var(--transition);
-}
-
-.btn-whatsapp:hover {
-    background-color: #1ebe5d;
-}
-
-.form-wrapper {
-    background-color: var(--bg-grafito);
-    padding: 40px;
-    border-radius: 6px;
-    border: 1px solid var(--borde-industrial);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: var(--blanco-hueso);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: var(--bg-grafito-light);
-    border: 1px solid var(--borde-industrial);
-    border-radius: 4px;
-    color: var(--blanco-hueso);
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--amarillo-acento);
-}
-
-/* ==========================================
-   9. FOOTER
-   ========================================== */
-.site-footer {
-    background-color: var(--bg-grafito);
-    color: var(--blanco-hueso);
-    text-align: center;
-    padding: 40px 0;
-    border-top: 1px solid var(--borde-industrial);
-}
-
-.footer-content p {
-    font-size: 0.9rem;
-}
-
-.footer-sub {
-    color: var(--texto-muted);
-    font-size: 0.8rem;
-    margin-top: 5px;
-}
-
-/* ==========================================
-   DISEÑO RESPONSIVE (MÓVIL PRIMERO)
-   ========================================== */
-@media (max-width: 900px) {
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .main-nav {
-        display: none; 
-    }
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio de Ingeniería y Arquitectura | Trámites Municipales y Legales Perú</title>
+    <!-- Google Fonts: Oswald para títulos, Inter para textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menú Fijo Superior -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">STRUCTURA<span>&ARQ</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#servicios">SERVICIOS</a></li>
+                    <li><a href="#proceso">PROCESO</a></li>
+                    <li><a href="#demolicion">DEMOLICIÓN</a></li>
+                    <li><a href="#proyectos">PROYECTOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#contacto" class="btn-nav">COTIZAR</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Sección Inicio (Hero) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <!-- Imagen general de arquitectura -->
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80" alt="Arquitecto analizando planos y maquetas" class="hero-img" loading="lazy">
+            <div class="hero-content container">
+                <span class="badge-tag">INGENIERÍA CIVIL & ARQUITECTURA LEGAL</span>
+                <h1>PLANOS Y TRÁMITES MUNICIPALES <span class="highlight">SIN DEMORAS EN EL PERÚ</span></h1>
+                <p>Especialistas en licencias de construcción, regularizaciones, saneamiento físico-legal y ejecución de obras normadas bajo el RNE y la Ley 29090.</p>
+                <a href="#contacto" class="btn btn-primary">SOLICITA TU COTIZACIÓN</a>
+            </div>
+        </section>
+
+        <!-- 2. Franja de Cifras -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">+450</span>
+                    <span class="stat-label">Proyectos y Trámites Aprobados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Años de Experiencia en el Sector</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Expedientes Conformes en Municipios</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador de Líneas de Construcción -->
+        <div class="construction-stripe"></div>
+
+        <!-- 3. Servicios (Tarjetas con tus imágenes asignadas exactamente) -->
+        <section id="servicios" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>NUESTROS SERVICIOS ESPECIALIZADOS</h2>
+                    <p>Soluciones técnicas y legales integrales para propietarios, constructoras e inmobiliarias.</p>
+                </div>
+                <div class="services-grid">
+                    
+                    <!-- Servicio 1: Independizaciones (Imagen 1) -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f844f?auto=format&fit=crop&w=600&q=80" alt="Independizaciones" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Independización</h3>
+                            <p>Separación legal de predios, aires o departamentos con partidas registrales individuales.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 2: Planos de trazado y lotización (Imagen 2) -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Planos de trazado y lotización" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Planos de Trazado y Lotización</h3>
+                            <p>Diseño de habilitaciones urbanas, vías, parques y distribución técnica de lotes.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 3: Licencia de demolición (Imagen 3) -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Licencia de demolición" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Licencia de Demolición</h3>
+                            <p>Expediente técnico, memoria descriptiva y permisos para demolición total o parcial.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 4: Edificación nueva (Imagen 4) -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Edificación nueva" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Edificación Nueva</h3>
+                            <p>Diseño arquitectónico y cálculo estructural completo para licencias de obra nueva.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 5: Subdivisión de lote (Imagen 5) -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Subdivisión de lote" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Subdivisión de Lote</h3>
+                            <p>Fraccionamiento técnico y legal de terrenos en sub-lotes reglamentarios.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 6: Ampliación (Imagen 6) -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Ampliación" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Ampliación</h3>
+                            <p>Diseño e ingeniería para la construcción de nuevos niveles o ampliación de áreas.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 7: Planos para prescripción adquisitiva -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Planos para prescripción adquisitiva" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Planos para Prescripción Adquisitiva</h3>
+                            <p>Elaboración de planos perimétricos y memoria descriptiva para procesos notariales.</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 8: Declaratoria de fábrica -->
+                    <article class="service-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Declaratoria de fábrica" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Declaratoria de Fábrica</h3>
+                            <p>Inscripción formal de construcciones ejecutadas sin licencia previa (Ley 27157).</p>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 9: Independización en la SUNARP (Última imagen subida) -->
+                    <article class="service-card highlight-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Independización en la SUNARP" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Independización en la SUNARP</h3>
+                            <p>Inscripción de títulos y habilitación de partidas registrales individuales ante Registros Públicos.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Proceso de Trabajo en 4 Pasos -->
+        <section id="proceso" class="process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>METODOLOGÍA DE TRABAJO</h2>
+                    <p>Un flujo claro, transparente y enfocado en evitar observaciones.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="step-num">01</span>
+                        <h3>Evaluación Preliminar</h3>
+                        <p>Analizamos los parámetros urbanísticos, zonificación y la situación legal actual de tu predio.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">02</span>
+                        <h3>Levantamiento Técnico</h3>
+                        <p>Visita de campo, toma de medidas exactas con equipos topográficos y recopilación de datos.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">03</span>
+                        <h3>Elaboración de Expediente</h3>
+                        <p>Diseño de planos de arquitectura, estructuras e instalaciones firmados por colegiados habilitados.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">04</span>
+                        <h3>Gestión y Aprobación</h3>
+                        <p>Presentación ante la municipalidad o notaría, realizando el seguimiento hasta la entrega final.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Demolición: Galería del Proceso -->
+        <section id="demolicion" class="demolition-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>SERVICIO ESPECIALIZADO: DEMOLICIÓN Y RETIRO DE DESMONTE</h2>
+                    <p>Seguridad industrial y maquinaria pesada para intervenciones seguras y normadas.</p>
+                </div>
+                <div class="demolition-grid">
+                    <div class="demo-card">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Inspección de seguridad y EPP" loading="lazy">
+                        <div class="demo-caption"><span>1. Inspección y Señalización</span></div>
+                    </div>
+                    <div class="demo-card">
+                        <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80" alt="Demolición con excavadora" loading="lazy">
+                        <div class="demo-caption"><span>2. Uso de Maquinaria Pesada</span></div>
+                    </div>
+                    <div class="demo-card">
+                        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Desmontaje selectivo" loading="lazy">
+                        <div class="demo-caption"><span>3. Desmontaje Estructural</span></div>
+                    </div>
+                    <div class="demo-card">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f844f?auto=format&fit=crop&w=600&q=80" alt="Retiro de escombros y desmonte" loading="lazy">
+                        <div class="demo-caption"><span>4. Retiro Masivo de Desmonte</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Proyectos: Galería de Obras Terminadas -->
+        <section id="proyectos" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>CASOS DE ÉXITO Y OBRAS TERMINADAS</h2>
+                    <p>Diseños residenciales modernos y edificaciones aprobadas con éxito.</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Residencia moderna de dos pisos" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Residencia Los Pinos</h4>
+                            <p>Diseño y Licencia de Edificación Nueva</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Fachada minimalista" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Edificio Multifamiliar San Isidro</h4>
+                            <p>Independización y Declaratoria de Fábrica</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Casa campestre contemporánea" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Casa de Campo Cieneguilla</h4>
+                            <p>Regularización y Habilitación</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80" alt="Condominio moderno" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Conjunto Habitacional Surco</h4>
+                            <p>Trazado, Lotización y Planos Técnicos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Sobre Nosotros -->
+        <section id="nosotros" class="about-section">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2>EXCELENCIA TÉCNICA Y RESPALDO LEGAL</h2>
+                    <p>Somos un estudio multidisciplinario conformado por ingenieros civiles y arquitectos colegiados con amplia trayectoria en el sector público y privado del Perú.</p>
+                    <p>Nos encargamos de simplificar los complejos trámites municipales, optimizando tiempos y reduciendo al mínimo cualquier riesgo de observación en comisiones técnicas.</p>
+                    <ul class="about-list">
+                        <li>✔ Arquitectos e Ingenieros Colegiados y Habilitados (CAP / CIP)</li>
+                        <li>✔ Asesoría legal y normativa personalizada</li>
+                        <li>✔ Compromiso total con los plazos establecidos</li>
+                    </ul>
+                </div>
+                <div class="about-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Equipo de ingenieros y arquitectos" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contacto -->
+        <section id="contacto" class="contact-section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>HABLEMOS DE TU PROYECTO</h2>
+                    <p>Ponte en contacto con nuestro equipo técnico y obtén una respuesta rápida para tu trámite o expediente.</p>
+                    
+                    <div class="contact-detail">
+                        <strong>Dirección:</strong> Av. Javier Prado Este 450, Oficina 302, Lima, Perú
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Horario:</strong> Lunes a Viernes: 9:00 am - 6:00 pm / Sábados: 9:00 am - 1:00 pm
+                    </div>
+                    
+                    <div class="whatsapp-box">
+                        <p>¿Consulta inmediata con un especialista?</p>
+                        <a href="https://wa.me/51900000000?text=Hola,%20deseo%20cotizar%20un%20trámite%20municipal" target="_blank" class="btn-whatsapp">
+                            💬 ESCRIBIR POR WHATSAPP
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form-wrapper">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Solicitud enviada con éxito! Nos comunicaremos contigo en breve.');">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Carlos Mendoza">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 987654321">
+                        </div>
+                        <div class="form-group">
+                            <label for="tramite">Tipo de Trámite</label>
+                            <select id="tramite" name="tramite" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="demolicion">Licencia de Demolición</option>
+                                <option value="edificacion">Edificación Nueva</option>
+                                <option value="remodelacion">Remodelación / Ampliación</option>
+                                <option value="independizacion">Independización</option>
+                                <option value="subdivision">Subdivisión de Lote</option>
+                                <option value="prescripcion">Planos para Prescripción Adquisitiva</option>
+                                <option value="lotizacion">Trazado y Lotización</option>
+                                <option value="fabrica">Declaratoria de Fábrica</option>
+                                <option value="sunarp">Independización en SUNARP</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Detalles del predio o consulta</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indica el distrito y área aproximada del terreno..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">ENVIAR SOLICITUD</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 9. Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Estudio de Ingeniería y Arquitectura. Todos los derechos reservados.</p>
+            <p class="footer-sub">Especialistas en licencias municipales, saneamiento y construcción en el Perú.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
