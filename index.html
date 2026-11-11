@@ -1,78 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Municipalidad de SJM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras e Infraestructura | Municipalidad de San Juan de Miraflores</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Encabezado Principal -->
     <header>
-        <h1>Municipalidad de SJM</h1>
-        <p>Trabajando por nuestra comunidad (2023 - 2026)</p>
-        
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#obras">Obras</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <div class="header-container">
+            <h1>Municipalidad de San Juan de Miraflores</h1>
+            <p>Gestión de Obras, Infraestructura y Seguridad (2023 - 2026)</p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#obras">Obras Reales</a></li>
+                    <li><a href="#tabla-resumen">Resumen</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="inicio">
-        <h2>Bienvenido</h2>
-        <p>Esta pagina muestra las principales obras y mejoras que se han realizado en San Juan de Miraflores en los ultimos años para ayudar a los vecinos.</p>
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Compromiso y Desarrollo para San Juan de Miraflores</h2>
+            <p>Portal informativo sobre el plan de infraestructura vial, recuperación de parques y modernización de la seguridad ciudadana impulsados en los sectores de Pamplona, Zona Urbana y Ciudad de Dios.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=600&q=80" alt="Av. El Parque San Juan de Miraflores">
+        </div>
     </section>
 
-    <section id="obras">
-        <h2>Obras y Mejoras en el Distrito</h2>
-        <p>Aqui estan algunas de las cosas que se hicieron:</p>
+    <!-- Sección de Obras Reales -->
+    <section id="obras" class="projects-section">
+        <h2>Principales Obras Ejecutadas (2023 - 2026)</h2>
+        <p class="section-subtitle">Impacto de las intervenciones de la municipalidad en las principales avenidas y asentamientos humanos:</p>
 
-        <ul>
-            <li>Pavimentacion de pistas y veredas en Pamplona Alta.</li>
-            <li>Mejoras en parques y zonas recreativas.</li>
-            <li>Limpieza publica y retiro de desmontes en las calles.</li>
-            <li>Programas de apoyo social para los vecinos.</li>
-        </ul>
+        <div class="card-grid">
+            <!-- Tarjeta 1: Pistas y Veredas -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1584467735811-628636cd4423?auto=format&fit=crop&w=500&q=80" alt="Pistas y veredas en SJM">
+                <div class="card-body">
+                    <h3>Pavimentación en 1° de Mayo y Leoncio Prado</h3>
+                    <p>Construcción e integración de más de 12,000 m² de pistas y veredas beneficiando a 9,000 vecinos en A.H. Primero de Mayo, Leoncio Prado y Virgen del Buen Pastor.</p>
+                </div>
+            </div>
 
-        <h3>Resumen de Trabajos</h3>
-        <table border="1">
-            <tr>
-                <th>Zona</th>
-                <th>Tipo de Obra</th>
-            </tr>
-            <tr>
-                <td>Pamplona Alta</td>
-                <td>Pistas nuevas</td>
-            </tr>
-            <tr>
-                <td>Zona Urbana</td>
-                <td>Parques y jardines</td>
-            </tr>
-            <tr>
-                <td>Ciudad de Dios</td>
-                <td>Limpieza y orden</td>
-            </tr>
-        </table>
-    </section>
+            <!-- Tarjeta 2: Av. El Parque y Seguridad -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=500&q=80" alt="Inauguración Avenida El Parque">
+                <div class="card-body">
+                    <h3>Av. El Parque y Caseta de Serenazgo</h3>
+                    <p>Remodelación integral de la Av. El Parque, junto con la instalación de nueva caseta descentralizada de Serenazgo y patrullaje integrado.</p>
+                </div>
+            </div>
 
-    <section id="contacto">
-        <h2>Escribenos</h2>
-        <p>Dejanos tu comentario o sugerencia:</p>
-
-        <form>
-            <label>Tu nombre:</label><br>
-            <input type="text" name="nombre"><br><br>
-
-            <label>Tu mensaje:</label><br>
-            <textarea name="mensaje"></textarea><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>Trabajo escolar de programacion - 2026</p>
-    </footer>
-
-</body>
+            <!-- Tarjeta 3: Vías Metropolitanas / Billinghurst -->
+            <div class="card">
+                <img src="
 </html>
