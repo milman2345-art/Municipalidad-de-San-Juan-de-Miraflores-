@@ -1,158 +1,254 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio de Arquitectura y Trámites Municipales | Saneamiento y Licencias</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#0a192f',
-                        navyLight: '#112240',
-                        gold: '#d4af37',
-                        goldLight: '#f3e5ab'
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Enlace a los estilos propios (styles.css) -->
+    <title>Estudio de Ingeniería y Arquitectura | Trámites Municipales y Legales Perú</title>
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body>
 
-    <!-- Topbar Informativo -->
-    <div class="bg-navy text-gray-300 text-xs py-2 px-4 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-4">
-                <span><i class="fas fa-phone-alt text-gold mr-1"></i> +51 900 000 000</span>
-                <span><i class="fas fa-envelope text-gold mr-1"></i> contacto@estudioarquitectura.pe</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <span class="text-gold font-medium"><i class="fas fa-shield-alt mr-1"></i> Especialistas Normados (Ley 29090 / Ley 27157)</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navbar Principal -->
-    <nav class="sticky top-0 z-50 bg-navy/95 backdrop-blur-md shadow-lg border-b border-gold/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-gold flex items-center justify-center text-navy font-black text-xl shadow-md">
-                    <i class="fas fa-drafting-compass"></i>
-                </div>
-                <div>
-                    <span class="text-xl font-bold tracking-wider text-white">ARQUI<span class="text-gold">TRÁMITES</span></span>
-                    <span class="block text-[10px] tracking-widest text-gray-400 uppercase">Ingeniería & Saneamiento</span>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-200">
-                <a href="#inicio" class="hover:text-gold transition">Inicio</a>
-                <a href="#servicios" class="hover:text-gold transition">Servicios</a>
-                <a href="#proceso" class="hover:text-gold transition">Metodología</a>
-                <a href="#contacto" class="bg-gold hover:bg-goldLight text-navy px-5 py-2.5 rounded-lg font-bold transition shadow-md">Cotizar Proyecto</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="inicio" class="relative bg-navy text-white overflow-hidden py-24 lg:py-32">
-        <div class="absolute inset-0 opacity-25 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80');"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="bg-gold/20 text-gold border border-gold/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 inline-block">
-                    Gestión Inmobiliaria y Municipal
-                </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-                    Licencias y Saneamiento Legal <span class="text-gold underline decoration-gold/50">sin demoras</span>
-                </h1>
-                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                    Soluciones integrales de arquitectura, ingeniería y habilitación urbana. Aprobamos tus expedientes técnicos ante municipalidades con total respaldo legal.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contacto" class="bg-gold hover:bg-goldLight text-navy font-bold px-8 py-4 rounded-xl text-center shadow-xl transition transform hover:-translate-y-0.5">
-                        <i class="fas fa-file-signature mr-2"></i> Solicitar Asesoría Legal
-                    </a>
-                    <a href="#servicios" class="border-2 border-gray-600 hover:border-gold text-white font-semibold px-8 py-4 rounded-xl text-center transition">
-                        Ver Catálogo de Servicios
-                    </a>
-                </div>
-            </div>
-            <div class="hidden lg:grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="Planos" class="rounded-xl shadow-2xl border border-gray-700 object-cover h-64 w-full">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f844f?auto=format&fit=crop&w=600&q=80" alt="Obra" class="rounded-xl shadow-2xl border border-gray-700 object-cover h-64 w-full mt-8">
-            </div>
+    <!-- Menú Fijo Superior -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Arq&Ing <span>Perú</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sección de Servicios Detallados -->
-    <section id="servicios" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-4">Servicios Especializados de Ingeniería y Arquitectura</h2>
-                <div class="w-24 h-1.5 bg-gold mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-600 text-base">Contamos con arquitectos e ingenieros colegiados expertos en normativas municipales, habilitaciones urbanas y regularizaciones notariales.</p>
+    <main>
+        <!-- 1. Sección Inicio (Hero) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Saneamiento Físico-Legal y Licencias Municipales sin Demoras</h1>
+                <p>Especialistas en expedientes técnicos, habilitaciones urbanas y regularizaciones ante municipalidades y SUNARP en todo el Perú.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Solicita tu cotización</a>
+                    <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
+                </div>
             </div>
+        </section>
 
-            <!-- Grid de los 8 servicios -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- 2. Sección Servicios (Tarjetas) -->
+        <section id="servicios" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios Especializados</h2>
+                <p class="section-subtitle">Soluciones normadas bajo el RNE, Ley 29090 y Ley 27157.</p>
                 
-                <!-- 1. Demolición -->
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Demolición" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-4">
-                            <span class="text-gold font-bold text-sm"><i class="fas fa-hammer mr-2"></i>Trámite Municipal</span>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Licencia de Demolición</h3>
+                        <p>Elaboración de expediente técnico y memoria descriptiva para demoliciones totales o parciales autorizadas.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Edificación Nueva</h3>
+                        <p>Diseño arquitectónico, cálculos estructurales, sanitarios y eléctricos para licencias de obra nueva.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Remodelación</h3>
+                        <p>Modificación y optimización de espacios interiores respetando los parámetros urbanísticos vigentes.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Ampliación</h3>
+                        <p>Proyectos de ampliación de áreas techadas para segundos pisos o niveles posteriores.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Independización</h3>
+                        <p>Separación legal y física de predios, aires o departamentos para obtener partidas registrales independientes.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Subdivisión de Lote</h3>
+                        <p>Fraccionamiento técnico y legal de terrenos rústicos o urbanos en sub-lotes reglamentarios.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Prescripción Adquisitiva</h3>
+                        <p>Planos perimétricos, de ubicación y memoria descriptiva para procesos notariales de prescripción.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Trazado y Lotización</h3>
+                        <p>Diseño urbano, habilitaciones, vías y habilitaciones de terrenos para nuevas urbanizaciones.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Declaratoria de Fábrica</h3>
+                        <p>Inscripción formal de construcciones ejecutadas sin licencia previa ante SUNARP.</p>
+                    </article>
+
+                    <article class="service-card highlight-card">
+                        <h3>Otros Trámites de Ingeniería</h3>
+                        <p>Certificados de zonificación, compatibilidad de uso, visación de planos y levantamientos topográficos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Proceso de Trabajo en 4 Pasos -->
+        <section id="proceso" class="process-section">
+            <div class="container">
+                <h2 class="section-title">¿Cómo Trabajamos?</h2>
+                <p class="section-subtitle">Un flujo de trabajo transparente y directo en 4 pasos</p>
+                
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="step-number">01</span>
+                        <h3>Consulta Inicial</h3>
+                        <p>Evaluamos la situación legal y los parámetros urbanísticos de tu predio sin costo inicial.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">02</span>
+                        <h3>Levantamiento</h3>
+                        <p>Inspección técnica en campo y toma de medidas precisas del terreno o edificación.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">03</span>
+                        <h3>Elaboración de Planos</h3>
+                        <p>Diseño de planos y expedientes técnicos firmados por profesionales colegiados.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">04</span>
+                        <h3>Presentación del Trámite</h3>
+                        <p>Ingreso de documentos ante la municipalidad o entidad correspondiente hasta su aprobación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sobre Nosotros -->
+        <section id="nosotros" class="about-section">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2 class="section-title left-align">Sobre Nuestro Estudio</h2>
+                    <p>Somos un equipo multidisciplinario de arquitectos e ingenieros civiles colegiados con amplia experiencia en la gestión pública y saneamiento inmobiliario en el Perú.</p>
+                    <p>Nuestro compromiso es brindarte seguridad jurídica, optimizar tiempos en las municipalidades y asegurar que cada proyecto cumpla rigurosamente con las normativas nacionales vigentes.</p>
+                    <ul class="about-list">
+                        <li>✔ Profesionales colegiados y habilitados (CAP / CIP)</li>
+                        <li>✔ Asesoría integral de principio a fin</li>
+                        <li>✔ Reducción de observaciones y demoras</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <!-- Ruta de imagen de ejemplo en carpeta /img -->
+                    <img src="img/estudio-arquitectura.jpg" alt="Equipo de ingenieros y arquitectos revisando planos">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Proyectos (Galería) -->
+        <section id="proyectos" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Proyectos y Trámites Aprobados</h2>
+                <p class="section-subtitle">Algunos de nuestros casos de éxito recientes</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="img/proyecto-1.jpg" alt="Licencia de Edificación Nueva - Lima">
+                        <div class="project-info">
+                            <h4>Edificación Multifamiliar</h4>
+                            <p>Licencia de Obra Nueva aprobada</p>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy mb-2">Licencia de Demolición</h3>
-                        <p class="text-gray-600 text-sm mb-4">Elaboración de expediente técnico, memoria descriptiva de demolición total o parcial y gestión de permisos.</p>
-                        <a href="#contacto" class="text-navy font-bold text-sm inline-flex items-center hover:text-gold transition">Consultar costo <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    <div class="project-card">
+                        <img src="img/proyecto-2.jpg" alt="Independización de departamentos">
+                        <div class="project-info">
+                            <h4>Independización de Predio</h4>
+                            <p>Saneamiento Registral SUNARP</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="img/proyecto-3.jpg" alt="Declaratoria de fábrica y ampliación">
+                        <div class="project-info">
+                            <h4>Declaratoria de Fábrica</h4>
+                            <p>Regularización Ley 27157</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contacto -->
+        <section id="contacto" class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title left-align">Hablemos de tu Proyecto</h2>
+                    <p>Completa el formulario y nos pondremos en contacto contigo en menos de 2 horas para brindarte una cotización estimada.</p>
+                    
+                    <div class="info-item">
+                        <strong>Dirección:</strong> Av. Principal 123, Oficina 402, Lima, Perú
+                    </div>
+                    <div class="info-item">
+                        <strong>Horario de Atención:</strong> Lunes a Viernes: 9:00 am - 6:00 pm / Sábados: 9:00 am - 1:00 pm
+                    </div>
+                    
+                    <div class="whatsapp-box">
+                        <p>¿Prefieres atención inmediata?</p>
+                        <a href="https://wa.me/51900000000?text=Hola,%20deseo%20consultar%20sobre%20un%20trámite%20municipal" target="_blank" class="btn-whatsapp">
+                            💬 Escríbenos por WhatsApp
+                        </a>
                     </div>
                 </div>
 
-                <!-- 2. Edificación Nueva -->
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Edificación Nueva" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-4">
-                            <span class="text-gold font-bold text-sm"><i class="fas fa-building mr-2"></i>Proyecto & Licencia</span>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy mb-2">Edificación Nueva</h3>
-                        <p class="text-gray-600 text-sm mb-4">Diseño arquitectónico integral, planos estructurales, sanitarios, eléctricos y obtención de licencia de obra.</p>
-                        <a href="#contacto" class="text-navy font-bold text-sm inline-flex items-center hover:text-gold transition">Consultar costo <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
-                    </div>
-                </div>
-
-                <!-- 3. Remodelación y Ampliación -->
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Remodelación" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-4">
-                            <span class="text-gold font-bold text-sm"><i class="fas fa-tools mr-2"></i>Optimización</span>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="987654321">
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy mb-2">Remodelación y Ampliación</h3>
-                        <p class="text-gray-600 text-sm mb-4">Ampliación de pisos superiores o redistribución de espacios cumpliendo los parámetros urbanísticos vigentes.</p>
-                        <a href="#contacto" class="text-navy font-bold text-sm inline-flex items-center hover:text-gold transition">Consultar costo <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
-                    </div>
+                        <div class="form-group">
+                            <label for="tramite">Tipo de Trámite</label>
+                            <select id="tramite" name="tramite" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="demolicion">Licencia de Demolición</option>
+                                <option value="edificacion">Edificación Nueva</option>
+                                <option value="remodelacion">Remodelación / Ampliación</option>
+                                <option value="independizacion">Independización</option>
+                                <option value="subdivision">Subdivisión de Lote</option>
+                                <option value="prescripcion">Prescripción Adquisitiva</option>
+                                <option value="lotizacion">Trazado y Lotización</option>
+                                <option value="fabrica">Declaratoria de Fábrica</option>
+                                <option value="otro">Otro trámite</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje o detalles del predio</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indica distrito y área aproximada..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Solicitud</button>
+                    </form>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <!-- 4. Independización -->
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Independización" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute inset-
+    <!-- 7. Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Estudio de Ingeniería y Arquitectura. Todos los derechos reservados.</p>
+            <p class="footer-sub">Especialistas en licencias municipales y saneamiento legal en el Perú.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
